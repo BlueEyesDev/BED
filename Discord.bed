@@ -1,0 +1,8 @@
+Default:
+	{Main}	`{e.Message}`
+	Webook	`https://discord.com/api/webhooks/x`
+	Github	`https://github.com/BlueEyesDev/BED`
+
+Main: (Exception e)
+	*embeds	[type:`rich`, title:`Notification`, `description`:$1, `timestamp`:{System}.Time, `url`:Github]
+	{curl} with {-H [Content-Type: `application/json`] -d [embeds:{embeds}].Json Webook}
