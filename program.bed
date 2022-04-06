@@ -1,12 +1,12 @@
 Default:
 	call	`Sorry is args invalid !`
 Call:
-	time	?	{Time}	:	Default	>	@
-	mail	?	{Mail}	:	Default	>	@
-	github	?	{Github}	:	Default > @
-	exemple ?	{Exemple}	: Default > @
+	time ? {Time}: Default	> @
+	mail ? {Mail}: Default	> @
+	github ? {Github}: Default > @
+	exemple ? {Exemple}: Default > @
 Exemple:
-	*	data	`Hello this is a exemple for debug current heur [{Time}]`
+	*data	`Hello this is a exemple for debug current heur [{Time}]`
 	< {data}.Reverse
 Time:
 	< {System}.Time 
