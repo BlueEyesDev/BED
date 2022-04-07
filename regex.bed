@@ -1,0 +1,11 @@
+Default:
+	{Main}	`{e.Message}`
+	Github	`https://github.com/BlueEyesDev/BED`
+
+Main: (Exception e) with {$1: `{Github}`}
+	*regex {Text}.Regex  with {regular:`BlueEyesDev((\/[0-9A-z\.]+)+)`, test:`{$1}`}
+	While {regex}.Success
+		{regex}.Groups for {i > @}
+		{regex}.NextMatch
+
+#Ligne 8 {regex}.Groups is null no reason for is return null fix Tomorrow
